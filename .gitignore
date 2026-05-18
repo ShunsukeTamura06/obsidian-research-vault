@@ -1,0 +1,31 @@
+# 実データは絶対にコミットしない（template fork 後の運用前提）
+raw/**/*
+!raw/.gitkeep
+!raw/**/.gitkeep
+
+daily/*
+!daily/.gitkeep
+
+inbox/*
+!inbox/.gitkeep
+
+outbox/
+
+# wiki/ はデフォルトでコミット許可。company-sensitive 用途では
+# ここに `wiki/銘柄/` などを追加すること。
+
+# Obsidian
+.obsidian/workspace*.json
+.obsidian/cache
+.obsidian/plugins/*/data.json
+.obsidian/appearance.json
+
+# kepano/obsidian-skills は別管理
+.claude/skills-kepano/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
