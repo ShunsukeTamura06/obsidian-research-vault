@@ -5,6 +5,8 @@
 - [Obsidian](https://obsidian.md/) (Desktop)
 - [Claude Code](https://docs.claude.com/en/docs/claude-code/overview) CLI
 - `git` と（任意）`gh` CLI
+- 社内リモートリポジトリへのアクセス権限
+- 社内チャット、会議ツール、文字起こしツール、調査ツールへの業務利用権限
 
 ## ステップ
 
@@ -56,6 +58,35 @@ CLAUDE.md を読んで、このvaultの運用ルールを把握して。
 
 `raw/news/` にファイルができ、`wiki/` のどこかが更新され、
 `daily/YYYY-MM-DD.md` にログが残っていれば成功。
+
+### 6. 日次同期の試運転
+
+終業前の差分を `inbox/daily-deltas/YYYY-MM-DD/` に置き、Claude に依頼する:
+
+```text
+日次更新して
+```
+
+`daily/YYYY-MM-DD.md` に同期ログができ、必要な `wiki/` が更新されれば成功。
+
+## 会社環境での使い方
+
+ローカル業務環境では、社内で別途共有されるワークスペース配下にプロジェクトを置く。
+具体的なユーザー ID、クラウド検証環境のホスト、社内 URL はテンプレート内に実値で記録しない。
+
+社内リモートリポジトリを使う場合は、空リポジトリを作成し、以下のように remote を設定する:
+
+```bash
+git remote add origin <社内リポジトリURL>
+git push -u origin main
+```
+
+調査素材は、社内外の調査ツール、社内チャット、会議・文字起こしツールから取得し、
+`CLAUDE.md` の情報源ルールに従って `raw/` と `wiki/` に分離する。
+
+終業前の自動更新を行う場合は、社内スクリプトやタスクスケジューラで当日の差分を
+`inbox/daily-deltas/YYYY-MM-DD/` に出力し、Claude の `daily-sync` を定時実行する。
+詳細は [DAILY_WORKFLOW.md](DAILY_WORKFLOW.md) を参照。
 
 ## カスタマイズ
 

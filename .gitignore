@@ -8,6 +8,9 @@ daily/*
 
 inbox/*
 !inbox/.gitkeep
+!inbox/daily-deltas/
+inbox/daily-deltas/*
+!inbox/daily-deltas/.gitkeep
 
 outbox/
 
