@@ -3,7 +3,7 @@
 Andrej Karpathy の [LLM Wiki パターン](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) を
 Obsidian + Claude Code で実装する vault テンプレート。
 
-調査業務（市場リサーチ、AI動向ブリーフィング、銘柄分析など）で
+IT エンジニアの業務（技術調査、要件定義、設計、開発、保守運用など）で
 **「毎回ゼロから再発見する」のではなく「合成済みの wiki が育っていく」**
 ワークフローを最小構成で実現する。
 

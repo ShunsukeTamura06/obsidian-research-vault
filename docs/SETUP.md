@@ -98,8 +98,8 @@ git push -u origin main
 - 必要なら frontmatter 必須項目を追加
 
 ### `wiki/` のサブフォルダ
-- 自分の領域に合わせて改名（例: `銘柄/` → `企業/`）
-- 新規領域を追加（例: `論文/`、`OSS/`）
+- 自分の担当領域に合わせて改名（例: `systems/` → `systems/core-system/`）
+- 新規領域を追加（例: `vendors/`、`security/`、`data/`）
 
 ### `.claude/skills/`
 - 自分の定型業務をスキル化
