@@ -8,6 +8,12 @@ daily/*
 
 inbox/*
 !inbox/.gitkeep
+!inbox/drop/
+inbox/drop/*
+!inbox/drop/.gitkeep
+!inbox/processed/
+inbox/processed/*
+!inbox/processed/.gitkeep
 !inbox/daily-deltas/
 inbox/daily-deltas/*
 !inbox/daily-deltas/.gitkeep

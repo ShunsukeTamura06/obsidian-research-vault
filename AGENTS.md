@@ -63,7 +63,7 @@
 - 概念ページには tag `#concept` 必須
 - 事実と推測を明示分離:
   ```markdown
-  **事実:** 2026年5月、Anthropicは Claude Opus 4.7 をリリース
+  **事実:** 2026年5月、Anthropicは Codex Opus 4.7 をリリース
   **推測:** SWE-bench スコアの伸びから、エージェント用途への最適化が継続している可能性
   ```
 

@@ -61,13 +61,13 @@ CLAUDE.md を読んで、このvaultの運用ルールを把握して。
 
 ### 6. 日次同期の試運転
 
-終業前の差分を `inbox/daily-deltas/YYYY-MM-DD/` に置き、Claude に依頼する:
+チャットコピー、会議 transcript、LLM 会話ログ、差分要約などのファイルを `inbox/drop/` に置き、Claude に依頼する:
 
 ```text
 日次更新して
 ```
 
-`daily/YYYY-MM-DD.md` に同期ログができ、必要な `wiki/` が更新されれば成功。
+`daily/YYYY-MM-DD.md` に同期ログができ、必要な `wiki/` が更新され、処理済みファイルが `inbox/processed/YYYY-MM-DD/` に移動されれば成功。
 
 ## 会社環境での使い方
 
@@ -84,8 +84,8 @@ git push -u origin main
 調査素材は、社内外の調査ツール、社内チャット、会議・文字起こしツールから取得し、
 `CLAUDE.md` の情報源ルールに従って `raw/` と `wiki/` に分離する。
 
-終業前の自動更新を行う場合は、社内スクリプトやタスクスケジューラで当日の差分を
-`inbox/daily-deltas/YYYY-MM-DD/` に出力し、Claude の `daily-sync` を定時実行する。
+終業前の自動更新を行う場合は、社内スクリプトやタスクスケジューラで当日の素材を
+`inbox/drop/` に出力し、Claude の `daily-sync` を定時実行する。
 詳細は [DAILY_WORKFLOW.md](DAILY_WORKFLOW.md) を参照。
 
 ## カスタマイズ
